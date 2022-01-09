@@ -1,4 +1,4 @@
 package com.nttdata.bootcamp.web.exponse;
 
-public class CustomaerController {
+public class CustomerController {
 }
