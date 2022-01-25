@@ -18,6 +18,6 @@ public class Constants {
     public final static String UPDATE_ID_NOTE="Para Actualizar los  datos del cliente , sera necesario enviar todo el registro con los datos ya actualizados junto a sus Id`s ";
 
     public final static String DELETE_ID_VALUE="Metodo a traves del cual se Elimina la informacion del cliente mediante su Id ";
-    public final static String DELETE_ID_NOTE="Para eliminar los  datos de un Cliente , sera necesario enviar el Id de la cliente ";
+    public final static String DELETE_ID_NOTE="Para eliminar los  datos de un Cliente , sera necesario enviar el Id del cliente ";
 
 }
