@@ -1,7 +1,7 @@
 package com.nttdata.bootcamp.customer.model;
 
 /**
- * <b>Enum</b>: {@link TypeDocument}<br/>
+ * <b>Enum</b>: {@link EntityName}<br/>
  * @author NTTDATA <br/>
  * <u>Developed by</u>: <br/>
  * <ul>
@@ -14,7 +14,7 @@ package com.nttdata.bootcamp.customer.model;
  * @version 1.0
  */
 
-public enum TypeDocument {
-    DNI,
-    RUC
+public enum EntityName {
+   nameCustomer,
+   bussinesName
 }
