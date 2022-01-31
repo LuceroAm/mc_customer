@@ -1,6 +1,7 @@
 package com.nttdata.bootcamp.web.exponse;
 
 import com.nttdata.bootcamp.customer.business.CustomerService;
+import com.nttdata.bootcamp.customer.model.Customer;
 import com.nttdata.bootcamp.customer.model.dto.request.CustomerRequest;
 import com.nttdata.bootcamp.customer.model.dto.response.CustomerResponse;
 import com.nttdata.bootcamp.customer.util.Constants;

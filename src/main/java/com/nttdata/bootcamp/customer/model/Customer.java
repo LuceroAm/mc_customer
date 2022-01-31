@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -31,6 +32,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Document(collection = "customer")
 @Builder
+@Slf4j
 public class Customer {
     @Id
     private String id = UUID.randomUUID().toString();

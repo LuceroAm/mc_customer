@@ -1,6 +1,7 @@
 package com.nttdata.bootcamp.customer.business.impl;
 
 import com.nttdata.bootcamp.customer.business.CustomerService;
+import com.nttdata.bootcamp.customer.model.Customer;
 import com.nttdata.bootcamp.customer.model.dto.request.CustomerRequest;
 import com.nttdata.bootcamp.customer.model.dto.response.CustomerResponse;
 import com.nttdata.bootcamp.customer.repository.CustomerRepository;
@@ -32,6 +33,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;
+
 
     @Override
     public Mono<CustomerResponse> create(CustomerRequest customerRequest) {

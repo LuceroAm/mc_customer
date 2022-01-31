@@ -1,5 +1,6 @@
 package com.nttdata.bootcamp.customer.business;
 
+import com.nttdata.bootcamp.customer.model.Customer;
 import com.nttdata.bootcamp.customer.model.dto.request.CustomerRequest;
 import com.nttdata.bootcamp.customer.model.dto.response.CustomerResponse;
 import reactor.core.publisher.Flux;

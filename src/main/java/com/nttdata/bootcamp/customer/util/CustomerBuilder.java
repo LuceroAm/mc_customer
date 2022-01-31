@@ -21,6 +21,7 @@ public class CustomerBuilder {
 
     public static CustomerResponse customerEntityToCustomerResponse(Customer model){
         return CustomerResponse.builder()
+                .id(model.getId())
                 .typeCustomer(model.getTypeCustomer())
                 .entityName(model.getEntityName())
                 .typeDocument(model.getTypeDocument())
