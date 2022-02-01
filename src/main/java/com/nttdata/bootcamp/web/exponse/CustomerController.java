@@ -16,6 +16,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import javax.management.monitor.MonitorNotification;
+import java.util.Map;
 
 @RestController
 @RequestMapping(Constants.MAIN_PATH)
@@ -41,7 +42,6 @@ public class CustomerController {
         log.info("Metoth findAll ");
         return customerService.findAll();
     }
-
     @GetMapping(Constants.ID)
     @ApiOperation(value = Constants.GET_ID_VALUE, notes = Constants.GET_ID_NOTE)
     public Mono<CustomerResponse> findById(@PathVariable("id") String id) {
@@ -67,4 +67,18 @@ public class CustomerController {
                 .flatMap(customerResponse -> Mono.just(ResponseEntity.ok(customerResponse)))
                 .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
     }
+
+    @GetMapping(Constants.GETFILTER)
+    @ApiOperation(value = Constants.GETDATA_VALUE, notes = Constants.GETDATA_NOTE)
+    public Mono<CustomerResponse> getData(@RequestParam Map<String, String> params){
+        log.info("Metoth getData ");
+        return customerService.getData(params);
+    }
+//    @GetMapping
+//    @ApiOperation(value = Constants.GETDATA_VALUE, notes = Constants.GETDATA_NOTE)
+//    public Observable<ProductResponse> getData(@RequestParam Map<String, String> params) {
+//        log.info("Enviando parametros de busqueda");
+//        return productService.getData(params);
+//    }
+
 }

@@ -42,18 +42,21 @@ public class CustomerRequest {
     @ApiModelProperty(value = "entityName", position = 3)
     private EntityName entityName;
 
-    @ApiModelProperty(value = "typeDocument", position = 4)
+    @ApiModelProperty(value = "entityNameDescription", position = 4)
+    private String entityNameDescription;
+
+    @ApiModelProperty(value = "typeDocument", position = 5)
     private TypeDocument typeDocument;
 
-    @ApiModelProperty(value = "numberDocument", position = 5)
+    @ApiModelProperty(value = "numberDocument", position = 6)
     private String numberDocument;
 
-    @ApiModelProperty(value = "telephone", position = 6)
+    @ApiModelProperty(value = "telephone", position = 7)
     private String telephone;
 
-    @ApiModelProperty(value = "address", position = 7)
+    @ApiModelProperty(value = "address", position = 8)
     private String address;
 
-    @ApiModelProperty(value = "email", position = 8)
+    @ApiModelProperty(value = "email", position = 9)
     private String email;
 }

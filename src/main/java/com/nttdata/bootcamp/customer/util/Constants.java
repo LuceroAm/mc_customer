@@ -4,6 +4,7 @@ public class Constants {
 
     public final static String MAIN_PATH = "/customer";
     public final static String ID = "/{id}";
+    public final static String GETFILTER = "/filter";
 
     public final static String SAVE_VALUE="Metodo a traves del cual se envia la informacion del cliente que  sera registrado dentro de la base de datos.";
     public final static String SAVE_NOTE="Para el registro del cliente , sera necesario el llenado de todo los campos , a excepcion de los Id´s los cuales seran generados automaticamente.";

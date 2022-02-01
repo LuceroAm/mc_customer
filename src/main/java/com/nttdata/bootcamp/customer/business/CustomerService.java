@@ -6,6 +6,8 @@ import com.nttdata.bootcamp.customer.model.dto.response.CustomerResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Map;
+
 /**
  * <b>Class</b>: {@link CustomerService}<br/>
  * @author NTTDATA <br/>
@@ -22,12 +24,10 @@ import reactor.core.publisher.Mono;
 
 public interface CustomerService {
     Mono<CustomerResponse> create(CustomerRequest customerRequest);
-
     Mono<CustomerResponse> findById(String id);
-
     Flux<CustomerResponse> findAll();
-
     Mono<CustomerResponse> update(CustomerRequest customerRequest);
-
     Mono<CustomerResponse> remove(String id);
+
+    Mono<CustomerResponse> getData(Map<String, String> params);
 }

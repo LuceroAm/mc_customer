@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Map;
+
 /**
  * <b>Class</b>: {@link CustomerServiceImpl}<br/>
  * @author NTTDATA <br/>
@@ -78,5 +80,24 @@ public class CustomerServiceImpl implements CustomerService {
                     .customerEntityToCustomerResponse(customer))
                 .flatMap(customerResponse -> customerRepository.deleteById(customerResponse.getId())
                 .thenReturn(customerResponse));
+    }
+
+    @Override
+    public Mono<CustomerResponse> getData(Map<String, String> params) {
+        log.info("Busqueda Dinamica");
+        String numberDocument;
+        if (!params.isEmpty()) {
+            numberDocument = params.get("numberDocument");
+            return customerRepository.findAll()
+                .map(customer -> CustomerBuilder
+                        .customerEntityToCustomerResponse(customer))
+                    .filter(customerResponse ->
+                            customerResponse.getNumberDocument()
+                            .equals(numberDocument))
+                    .next()
+                    ;
+        }
+        return null;
+
     }
 }
