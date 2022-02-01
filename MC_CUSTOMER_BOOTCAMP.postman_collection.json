@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "c2d62981-78f3-46b0-8512-d1d00fb2ec33",
+		"name": "MC_CUSTOMER_BOOTCAMP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typeCustomer\": 0,\r\n  \"entityName\": 0,\r\n  \"entityNameDescription\": \"Lucero Ampudia\",\r\n    \"typeDocument\": 0,\r\n  \"numberDocument\": \"74593040\",\r\n  \"telephone\": 960412212,\r\n  \"address\": \"Av gasoducto\",\r\n  \"email\": \"luamtri24@gmail.com\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9010/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9010",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typeCustomer\": 0,\r\n  \"entityName\": 0,\r\n    \"typeDocument\": 0,\r\n  \"numberDocument\": \"74562326\",\r\n  \"telephone\": 55555555,\r\n  \"address\": \"abcdc\",\r\n  \"email\": \"xsxc@cd.com\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9010/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9010",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"typeCustomer\": 0,\r\n  \"entityName\": 0,\r\n    \"typeDocument\": 0,\r\n  \"numberDocument\": \"74562326\",\r\n  \"telephone\": 55555555,\r\n  \"address\": \"abcdc\",\r\n  \"email\": \"xsxc@cd.com\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9010/customer?numberDocument=74593040",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9010",
+					"path": [
+						"customer"
+					],
+					"query": [
+						{
+							"key": "numberDocument",
+							"value": "74593040"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
